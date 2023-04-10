@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
 import { QueryConfig, QueryResult } from "pg";
 import { IMovie, TMovie } from "./interface";
 import { client } from "./database";

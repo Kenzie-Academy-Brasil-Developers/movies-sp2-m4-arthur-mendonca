@@ -23,7 +23,6 @@ const checkMovieById = async (
     text: queryString,
     values: [id],
   };
-  console.log(queryConfig);
   const queryResult: QueryResult<IMovie> = await client.query(queryConfig);
 
   if (queryResult.rowCount === 0) {
@@ -31,7 +30,6 @@ const checkMovieById = async (
       error: "Movie not found!",
     });
   }
-  console.log(queryResult);
   response.locals.movie = queryResult.rows[0];
   return next();
 };
